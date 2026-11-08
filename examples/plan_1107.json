@@ -1,0 +1,302 @@
+{
+ "draft_dir": "C:/Users/PC/AppData/Local/CapCut/User Data/Projects/com.lveditor.draft/1107",
+ "transcript": "examples/transcript_1107.json",
+ "voice": {
+  "path": "C:/Users/PC/Downloads/ElevenLabs_2026-11-07T10_26_39_Adam - Dominant, Firm_pre_s100_v3.mp3",
+  "volume": 1.0
+ },
+ "captions": {
+  "max_words": 7,
+  "color": "#f0ff00",
+  "stroke_color": "#000000",
+  "stroke_width": 0.06,
+  "font_size": 10,
+  "position_y": -0.56,
+  "tail": 0.25,
+  "font": {
+   "id": "7542214368361057553",
+   "title": "Montserrat",
+   "path": "C:/Users/PC/AppData/Local/CapCut/User Data/Cache/effect/7542214368361057553/d376267c892ee3a53654ae93a78dcfb7/font.ttf"
+  },
+  "animation": {
+   "id": "7325378104753394178",
+   "name": "Phóng to và tô màu",
+   "path": "C:/Users/PC/AppData/Local/CapCut/User Data/Cache/effect/7325378104753394178/d6d6d5855f135143ce9617387626f79f"
+  }
+ },
+ "video": {
+  "mute": true,
+  "clips": [
+   {
+    "chunk": 0,
+    "file": "F:/DCIM/DJI_002/DJI_20261017172608_0348_D.MP4",
+    "src": 0.5
+   },
+   {
+    "at": 3.13,
+    "file": "D:/New folder/DJI_001/DJI_20260530102432_0043_D.MP4",
+    "src": 5
+   },
+   {
+    "at": 5.84,
+    "file": "F:/DCIM/DJI_002/DJI_20261017171508_0341_D.MP4",
+    "src": 0
+   },
+   {
+    "at": 8.17,
+    "file": "D:/New folder/DJI_001/mới2/DJI_20260617151153_0121_D.MP4",
+    "src": 0.5
+   },
+   {
+    "at": 12.72,
+    "file": "D:/New folder/DJI_001/DJI_20260530091705_0038_D.MP4",
+    "src": 20
+   },
+   {
+    "at": 18.03,
+    "file": "D:/New folder/DJI_001/mới2/DJI_20260617100935_0078_D.MP4",
+    "src": 5
+   },
+   {
+    "at": 19.9,
+    "file": "D:/New folder/DJI_001/mới2/DJI_20260617115702_0111_D.MP4",
+    "src": 1
+   },
+   {
+    "at": 21.74,
+    "file": "D:/New folder/DJI_001/DJI_001/DJI_20260703223827_0021_D.MP4",
+    "src": 2
+   },
+   {
+    "at": 24.42,
+    "file": "D:/New folder/DJI_001/DJI_20260531131935_0055_D.MP4",
+    "src": 6
+   },
+   {
+    "at": 26.53,
+    "file": "F:/DCIM/DJI_002/DJI_20261018152755_0409_D.MP4",
+    "src": 20
+   },
+   {
+    "chunk": 12,
+    "file": "D:/New folder/DJI_001/mới2/DJI_20260617115427_0107_D.MP4",
+    "src": 0
+   },
+   {
+    "at": 31.28,
+    "file": "D:/New folder/DJI_001/DJI_20260606181002_0126_D.MP4",
+    "src": 2
+   },
+   {
+    "at": 36.02,
+    "file": "D:/New folder/DJI_001/DJI_001/DJI_20260704142631_0034_D.MP4",
+    "src": 1
+   },
+   {
+    "at": 37.52,
+    "file": "F:/DCIM/DJI_002/DJI_20261018153157_0410_D.MP4",
+    "src": 30
+   },
+   {
+    "at": 41.0,
+    "file": "F:/DCIM/DJI_002/DJI_20261018152609_0408_D.MP4",
+    "src": 2
+   },
+   {
+    "at": 44.04,
+    "file": "D:/New folder/DJI_001/DJI_20260530091705_0038_D.MP4",
+    "src": 80
+   },
+   {
+    "at": 48.19,
+    "file": "F:/DCIM/DJI_002/DJI_20261017132451_0319_D.MP4",
+    "src": 45
+   },
+   {
+    "at": 52.65,
+    "file": "F:/DCIM/DJI_002/DJI_20261017132204_0317_D.MP4",
+    "src": 1
+   },
+   {
+    "at": 56.55,
+    "file": "F:/DCIM/DJI_002/DJI_20261017132243_0318_D.MP4",
+    "src": 0
+   },
+   {
+    "at": 60.54,
+    "file": "F:/DCIM/DJI_002/DJI_20261017132150_0316_D.MP4",
+    "src": 2
+   },
+   {
+    "at": 62.72,
+    "file": "F:/DCIM/DJI_002/DJI_20261017173933_0360_D.MP4",
+    "src": 0
+   },
+   {
+    "at": 65.08,
+    "file": "F:/DCIM/DJI_002/DJI_20261017164110_0336_D.MP4",
+    "src": 10
+   },
+   {
+    "at": 67.11,
+    "file": "F:/DCIM/DJI_002/DJI_20261017180026_0375_D.MP4",
+    "src": 0
+   },
+   {
+    "at": 68.75,
+    "file": "F:/DCIM/DJI_002/DJI_20261017173341_0357_D.MP4",
+    "src": 0
+   },
+   {
+    "at": 71.38,
+    "file": "F:/DCIM/DJI_002/DJI_20261017172608_0348_D.MP4",
+    "src": 30
+   },
+   {
+    "chunk": 32,
+    "file": "D:/New folder/DJI_001/DJI_20260530102432_0043_D.MP4",
+    "src": 25
+   },
+   {
+    "at": 77.83,
+    "file": "F:/DCIM/DJI_002/DJI_20261017180428_0379_D.MP4",
+    "src": 0
+   },
+   {
+    "at": 82.22,
+    "file": "F:/DCIM/DJI_002/DJI_20261017180053_0376_D.MP4",
+    "src": 0.5
+   }
+  ]
+ },
+ "sfx": {
+  "library": {
+   "whoosh": {
+    "name": "\"whoosh\" (Badminton racket swing) D(966368)",
+    "path": "C:/Users/PC/AppData/Local/CapCut/User Data/Cache/music/43000c5d7742793472d186bd8a7ed6a7.mp3",
+    "duration_us": 400000,
+    "effect_id": "6930311127939155969",
+    "volume": 0.55,
+    "offset_frames": -6
+   },
+   "pop": {
+    "name": "pop! (tapping the mouth with a hand)(912415)",
+    "path": "C:/Users/PC/AppData/Local/CapCut/User Data/Cache/music/6238aa6c3491fbc9af81e0e8afcb5931.mp3",
+    "duration_us": 366666,
+    "effect_id": "6906958162219010050",
+    "volume": 0.8
+   },
+   "click": {
+    "name": "鼠标单击1",
+    "path": "C:/Users/PC/AppData/Local/CapCut/User Data/Cache/music/25b5bc6c42f453173fbf056859eec22b.mp3",
+    "duration_us": 766666,
+    "effect_id": "7380059209545746473",
+    "volume": 0.7
+   },
+   "shutter": {
+    "name": "click (camera shutter sound single shot)(1111055)",
+    "path": "C:/Users/PC/AppData/Local/CapCut/User Data/Cache/music/5cb68078e0369e8e95942168eb51f0f4.mp3",
+    "duration_us": 300000,
+    "effect_id": "7021278097383098369",
+    "volume": 0.7
+   },
+   "kiss": {
+    "name": "Cartoon kiss",
+    "path": "C:/Users/PC/AppData/Local/CapCut/User Data/Cache/music/0b892a58281132c8568cd9a912c116b1.mp3",
+    "duration_us": 700000,
+    "effect_id": "6993230936981424130",
+    "volume": 0.6
+   }
+  },
+  "events": [
+   {
+    "kind": "whoosh",
+    "cut": 1
+   },
+   {
+    "kind": "whoosh",
+    "cut": 2
+   },
+   {
+    "kind": "whoosh",
+    "cut": 7
+   },
+   {
+    "kind": "whoosh",
+    "cut": 11
+   },
+   {
+    "kind": "whoosh",
+    "cut": 15
+   },
+   {
+    "kind": "whoosh",
+    "cut": 16
+   },
+   {
+    "kind": "whoosh",
+    "cut": 18
+   },
+   {
+    "kind": "whoosh",
+    "cut": 20
+   },
+   {
+    "kind": "whoosh",
+    "cut": 23
+   },
+   {
+    "kind": "pop",
+    "at": 0
+   },
+   {
+    "kind": "pop",
+    "word": "15",
+    "near": 4.5
+   },
+   {
+    "kind": "click",
+    "cut": 3
+   },
+   {
+    "kind": "click",
+    "at": 10.3,
+    "volume": 0.6
+   },
+   {
+    "kind": "pop",
+    "word": "48",
+    "near": 14
+   },
+   {
+    "kind": "shutter",
+    "cut": 8
+   },
+   {
+    "kind": "shutter",
+    "word": "lịch",
+    "near": 35
+   },
+   {
+    "kind": "pop",
+    "word": "stress",
+    "near": 36.2
+   },
+   {
+    "kind": "kiss",
+    "word": "haha",
+    "near": 51
+   },
+   {
+    "kind": "shutter",
+    "word": "Cát",
+    "near": 59
+   },
+   {
+    "kind": "pop",
+    "cut": 27,
+    "volume": 0.9
+   }
+  ]
+ }
+}
