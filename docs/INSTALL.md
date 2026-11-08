@@ -1,4 +1,6 @@
-# Cài đặt (Windows 10/11)
+# Cài đặt
+
+> Hướng dẫn đầy đủ từng bước: **[Windows](HUONG_DAN_WINDOWS.md)** · **[macOS](HUONG_DAN_MACOS.md)**. Phần dưới là ghi chú chung cho Windows.
 
 ## 1. Python 3.10 trở lên
 

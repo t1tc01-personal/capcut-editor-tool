@@ -10,11 +10,14 @@ Dựng timeline CapCut **không cần mở CapCut**: công cụ ghi thẳng vào
 
 > Đã dùng để dựng dự án `1107` (voice 83 s, 28 cảnh, 67 dòng phụ đề, 20 SFX). File kế hoạch mẫu nằm trong `examples/`.
 
-## Cài đặt nhanh
+## Cài đặt & sử dụng từ A–Z
 
-1. Cài **Python 3.10+** và **ffmpeg** (chi tiết: [docs/INSTALL.md](docs/INSTALL.md)).
-2. Nhấp đúp `setup.bat` – tạo môi trường ảo, cài thư viện, tải model Whisper (~1.9 GB, chỉ một lần).
-3. Nhấp đúp `run.bat` để mở cửa sổ lệnh đã kích hoạt môi trường.
+| Hệ điều hành | Hướng dẫn | Script cài |
+|---|---|---|
+| **Windows 10/11** | [docs/HUONG_DAN_WINDOWS.md](docs/HUONG_DAN_WINDOWS.md) | `setup.bat`, `run.bat` |
+| **macOS (MacBook Intel / Apple M)** | [docs/HUONG_DAN_MACOS.md](docs/HUONG_DAN_MACOS.md) | `setup.sh`, `run.sh` |
+
+Tóm tắt: cài **Python 3.10+** và **ffmpeg** → chạy script cài (tạo môi trường, cài thư viện, tải model Whisper ~1.9 GB) → mỗi lần dùng mở `run.bat` / `source run.sh`.
 
 ## Quy trình 5 bước
 
@@ -24,6 +27,7 @@ Dựng timeline CapCut **không cần mở CapCut**: công cụ ghi thẳng vào
 |---|---|---|
 | 0. Chuẩn bị | Trong CapCut: tạo dự án, **import** voice + các clip vào thư viện (không cần kéo vào timeline), dùng thử hiệu ứng chú thích *Color and zoom*, font *Montserrat* và các SFX một lần để CapCut tải về bộ nhớ đệm. Đóng CapCut. | |
 | 1. Chép lời | `python -m capcut_tool.transcribe "C:\Users\PC\Downloads\voice.mp3" -o work\transcript.json` | Câu + mốc thời gian. Sửa chính tả, thêm ` \| ` để ngắt dòng phụ đề. |
+| 1b. Lấy tài nguyên | `python -m capcut_tool.find_resources "<thư mục com.lveditor.draft>" --check` | Đường dẫn font, hiệu ứng chữ, SFX trên máy (bắt buộc khi dùng Mac / máy khác). |
 | 2. Xem clip | `python -m capcut_tool.contact_sheet --draft "<thư mục dự án>" -o work\sheets` | Ảnh 6 khung/clip + `index.json` để chọn cảnh. |
 | 3. Viết kế hoạch | Sao chép `examples\plan_1107.json` → `work\plan.json`, sửa: `draft_dir`, `voice`, danh sách `clips`, `sfx.events`. | Xem [docs/PLAN_FORMAT.md](docs/PLAN_FORMAT.md). |
 | 4. Dựng | `python -m capcut_tool.build work\plan.json --dry-run` rồi `python -m capcut_tool.preview work\draft_content.json -o work\preview.mp4` để kiểm tra; ổn thì chạy `python -m capcut_tool.build work\plan.json` | Ghi vào dự án + thư mục sao lưu `_backup_capcut_tool_<thời gian>`. |
@@ -41,9 +45,12 @@ python -m capcut_tool.restore "%LOCALAPPDATA%\CapCut\User Data\Projects\com.lved
 capcut-editor-tool/
 ├─ README.md                 – tài liệu này
 ├─ setup.bat / run.bat       – cài đặt & mở môi trường (Windows)
+├─ setup.sh / run.sh         – cài đặt & mở môi trường (macOS)
 ├─ requirements.txt
 ├─ docs/
-│  ├─ INSTALL.md             – cài Python, ffmpeg, model; xử lý lỗi
+│  ├─ HUONG_DAN_WINDOWS.md   – cài đặt & sử dụng A–Z trên Windows
+│  ├─ HUONG_DAN_MACOS.md     – cài đặt & sử dụng A–Z trên macOS
+│  ├─ INSTALL.md             – ghi chú cài đặt chung
 │  ├─ PLAN_FORMAT.md         – mô tả đầy đủ file kế hoạch
 │  └─ HOW_IT_WORKS.md        – cấu trúc file dự án CapCut & cách công cụ ghi
 ├─ capcut_tool/
@@ -52,6 +59,7 @@ capcut-editor-tool/
 │  ├─ build.py               – plan → draft_content.json (cảnh, phụ đề, SFX)
 │  ├─ preview.py             – xuất video xem trước từ draft
 │  ├─ restore.py             – khôi phục bản sao lưu
+│  ├─ find_resources.py      – tìm đường dẫn font / hiệu ứng / SFX trong Cache CapCut
 │  ├─ download_model.py      – tải model Whisper
 │  ├─ draft.py, common.py    – đọc/ghi dự án, tiện ích thời gian theo khung hình
 │  └─ templates/segments.json– segment mẫu (video, voice, phụ đề, SFX) lấy từ CapCut 187.0.0
