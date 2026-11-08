@@ -19,6 +19,12 @@ Dựng timeline CapCut **không cần mở CapCut**: công cụ ghi thẳng vào
 
 Tóm tắt: cài **Python 3.10+** và **ffmpeg** → chạy script cài (tạo môi trường, cài thư viện, tải model Whisper ~1.9 GB) → mỗi lần dùng mở `run.bat` / `source run.sh`.
 
+## Cách nhanh nhất: chuẩn bị trên máy, dựng bằng prompt
+
+1. Import voice + clip vào dự án CapCut, đóng CapCut.
+2. Nhấp đúp **`prepare.bat`** (Mac: `./prepare.sh 1109`) → nhập tên dự án. Máy bạn tự chép lời voice, tạo ảnh xem clip, tìm font/hiệu ứng/SFX vào `work\<dự án>\` (dùng môi trường đã cài, không tải lại gì).
+3. Nhắn Claude: *"Dựng dự án 1109"* (skill `capcut-auto-edit`). Claude chỉ đọc các file nhỏ trong `work\<dự án>\`, viết kế hoạch và ghi thẳng vào dự án — không cài đặt, không tải model.
+
 ## Quy trình 5 bước
 
 > ⚠️ **Đóng dự án trong CapCut** (hoặc tắt CapCut) trước bước 4, nếu không CapCut sẽ ghi đè thay đổi.
@@ -39,6 +45,11 @@ Khôi phục bản trước khi dựng:
 python -m capcut_tool.restore "%LOCALAPPDATA%\CapCut\User Data\Projects\com.lveditor.draft\1107\_backup_capcut_tool_20261108_170000"
 ```
 
+## Dùng bằng prompt (Claude Skill)
+
+`skills/capcut-auto-edit/SKILL.md` là skill để Claude (Cowork / Claude Code) tự chạy toàn bộ quy trình chỉ từ một câu lệnh, vd. *"Dựng dự án 1109 bằng capcut-auto-edit"*.
+Cài: lưu skill từ thẻ đề xuất trong Claude, hoặc chép thư mục `skills/capcut-auto-edit` vào thư mục skills của Claude (vd. `~/.claude/skills/`).
+
 ## Cấu trúc thư mục
 
 ```
@@ -46,6 +57,7 @@ capcut-editor-tool/
 ├─ README.md                 – tài liệu này
 ├─ setup.bat / run.bat       – cài đặt & mở môi trường (Windows)
 ├─ setup.sh / run.sh         – cài đặt & mở môi trường (macOS)
+├─ prepare.bat / prepare.sh  – chuẩn bị dữ liệu cho một dự án (chạy trên máy)
 ├─ requirements.txt
 ├─ docs/
 │  ├─ HUONG_DAN_WINDOWS.md   – cài đặt & sử dụng A–Z trên Windows
@@ -59,10 +71,13 @@ capcut-editor-tool/
 │  ├─ build.py               – plan → draft_content.json (cảnh, phụ đề, SFX)
 │  ├─ preview.py             – xuất video xem trước từ draft
 │  ├─ restore.py             – khôi phục bản sao lưu
+│  ├─ prepare.py             – chuẩn bị trên máy: transcript + ảnh clip + tài nguyên → work/<dự án>/
 │  ├─ find_resources.py      – tìm đường dẫn font / hiệu ứng / SFX trong Cache CapCut
 │  ├─ download_model.py      – tải model Whisper
 │  ├─ draft.py, common.py    – đọc/ghi dự án, tiện ích thời gian theo khung hình
 │  └─ templates/segments.json– segment mẫu (video, voice, phụ đề, SFX) lấy từ CapCut 187.0.0
+├─ skills/
+│  └─ capcut-auto-edit/SKILL.md – skill Claude: dựng dự án chỉ bằng prompt
 └─ examples/
    ├─ plan_1107.json         – kế hoạch thực tế của dự án 1107
    └─ transcript_1107.json   – lời thoại đã sửa của dự án 1107
