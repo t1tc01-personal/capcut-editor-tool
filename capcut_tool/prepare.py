@@ -44,10 +44,14 @@ def grids(sheet_dir, files, per=6):
         for f in chunk:
             args += ["-i", os.path.join(sheet_dir, f)]
         name = f"grid_{g:02d}.jpg"
+        # clip quay ngang cho ảnh rộng hơn -> co/đệm mọi ảnh về cùng khổ 816x240 để vstack được
+        fit = "scale=816:240:force_original_aspect_ratio=decrease,pad=816:240:0:(oh-ih)/2"
         if len(chunk) == 1:
-            args += ["-vf", "null", os.path.join(sheet_dir, name)]
+            args += ["-vf", fit, os.path.join(sheet_dir, name)]
         else:
-            args += ["-filter_complex", f"vstack={len(chunk)}", os.path.join(sheet_dir, name)]
+            fc = ";".join(f"[{i}]{fit}[v{i}]" for i in range(len(chunk)))
+            fc += ";" + "".join(f"[v{i}]" for i in range(len(chunk))) + f"vstack={len(chunk)}"
+            args += ["-filter_complex", fc, os.path.join(sheet_dir, name)]
         subprocess.run(args, check=True)
         out.append(name)
     return out
